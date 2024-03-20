@@ -56,16 +56,6 @@ public class MainLayout extends AppLayout {
         tabs.setOrientation(Tabs.Orientation.VERTICAL);
         tabs.setSizeFull();
 
-        var github = new Anchor("https://github.com/kochetkov-ma/allure-server",
-            new IronIcon("icomoon", "github"));
-        github.setTarget("_blank");
-        var dockerHub = new Anchor("https://hub.docker.com/r/kochetkovma/allure-server",
-            new IronIcon("icomoon", "docker"));
-        dockerHub.setTarget("_blank");
-        var linkedIn = new Anchor("https://www.linkedin.com/in/maxim-kochetkov-75178215a/",
-            new IronIcon("icomoon", "linkedin"));
-        linkedIn.setTarget("_blank");
-
         var footer = new HorizontalLayout(github, dockerHub, linkedIn);
         var menu = new VerticalLayout(tabs, footer);
         menu.setHeightFull();
