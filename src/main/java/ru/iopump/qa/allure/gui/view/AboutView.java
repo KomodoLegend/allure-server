@@ -43,6 +43,8 @@ public class AboutView extends VerticalLayout {
 
         var mainLayout = new VerticalLayout(description);
         mainLayout.getStyle().set(FONT_FAMILY, GERMANIA_ONE);
+        mainLayout.getStyle().set("color", "#ffffff");
+
         add(mainLayout);
     }
 

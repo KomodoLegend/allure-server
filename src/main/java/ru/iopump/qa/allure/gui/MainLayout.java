@@ -36,7 +36,6 @@ public class MainLayout extends AppLayout {
     private void createHeader() {
         var logo = new H3(ALLURE_SERVER);
         logo.addClassName("logo");
-        logo.getStyle().set("background-color", "#ffffff");
         logo.getStyle().set("color", "#ffffff");
 
         var header = new HorizontalLayout(new DrawerToggle(), logo);
