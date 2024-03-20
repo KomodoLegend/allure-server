@@ -39,23 +39,23 @@ public class MainLayout extends AppLayout {
         header.setDefaultVerticalComponentAlignment(FlexComponent.Alignment.CENTER);
         header.setWidth("100%");
         header.addClassName("header");
-
+        header.getStyle().set("background-color", "#000000");
         addToNavbar(header);
     }
 
     private void createDrawer() {
         var reports = new RouterLink("Reports", ReportsView.class);
         reports.setHighlightCondition(HighlightConditions.sameLocation());
-        reports.getStyle().set("color", "#ffffff");
+        reports.getStyle().set("background-color", "#ffffff");
         var results = new RouterLink("Results", ResultsView.class);
         results.setHighlightCondition(HighlightConditions.sameLocation());
-        results.getStyle().set("color", "#ffffff");
+        results.getStyle().set("background-color", "#ffffff");
         var swagger = new RouterLink("Swagger", SwaggerView.class);
         results.setHighlightCondition(HighlightConditions.sameLocation());
-        swagger.getStyle().set("color", "#ffffff");
+        swagger.getStyle().set("background-color", "#ffffff");
         var about = new RouterLink("About", AboutView.class);
         results.setHighlightCondition(HighlightConditions.sameLocation());
-        about.getStyle().set("color", "#ffffff");
+        about.getStyle().set("background-color", "#ffffff");
 
         Tabs tabs = new Tabs(new Tab(reports), new Tab(results), new Tab(swagger), new Tab(about));
         tabs.setOrientation(Tabs.Orientation.VERTICAL);
