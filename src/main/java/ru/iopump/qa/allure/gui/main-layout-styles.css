@@ -1,0 +1,22 @@
+/* frontend/styles/main-layout-styles.css */
+
+/* Цвет для логотипа */
+.logo {
+    color: blue;
+}
+
+/* Цвет для заголовка */
+.header {
+    background-color: lightblue;
+}
+
+/* Цвет для меню в боковой панели */
+.tabs {
+    background-color: lightgray;
+}
+
+/* Цвет для активного элемента меню */
+.tabs .tabitem-selected {
+    background-color: darkgray;
+    color: white;
+}
