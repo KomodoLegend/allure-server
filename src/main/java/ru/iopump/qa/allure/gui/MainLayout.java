@@ -19,7 +19,7 @@ import ru.iopump.qa.allure.gui.view.ResultsView;
 import ru.iopump.qa.allure.gui.view.SwaggerView;
 
 @JsModule("./brands.js")
-@CssImport("./styles/main-layout-styles.css")
+@CssImport(value = "./styles/main-layout-styles.css", themeFor = "vaadin-app-layout")
 
 public class MainLayout extends AppLayout {
 
