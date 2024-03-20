@@ -1,5 +1,6 @@
 package ru.iopump.qa.allure.gui;
 
+import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
 import com.vaadin.flow.component.dependency.JsModule;
@@ -19,6 +20,7 @@ import ru.iopump.qa.allure.gui.view.ResultsView;
 import ru.iopump.qa.allure.gui.view.SwaggerView;
 
 @JsModule("./brands.js")
+@CssImport(value = "./styles/custom-styles.css", themeFor = "vaadin-app-layout")
 public class MainLayout extends AppLayout {
 
     public static final String ALLURE_SERVER = "Allure Server";
