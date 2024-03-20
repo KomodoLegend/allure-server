@@ -1,11 +1,11 @@
 :root {
     /* Primary color */
-    --lumo-primary-color: #bfe70e; /* Синий цвет */
+    --lumo-primary-color: #d50ee7; /* Синий цвет */
     
     /* Text color */
-    --lumo-body-text-color: #ebe7e7; /* Цвет текста */
-    --lumo-secondary-text-color: #ebe7e7;
-    --lumo-primary-text-color: #959090;
+    --lumo-body-text-color: #ec2323; /* Цвет текста */
+    --lumo-secondary-text-color: #0cd53b;
+    --lumo-primary-text-color: #0ed1b0;
     /* Background color */
     --lumo-base-color: #1a1a1a; /* Основной фоновый цвет */
   }
