@@ -46,12 +46,16 @@ public class MainLayout extends AppLayout {
     private void createDrawer() {
         var reports = new RouterLink("Reports", ReportsView.class);
         reports.setHighlightCondition(HighlightConditions.sameLocation());
+        reports.getStyle().set("background-color", "#1a1a1a");
         var results = new RouterLink("Results", ResultsView.class);
         results.setHighlightCondition(HighlightConditions.sameLocation());
+        results.getStyle().set("background-color", "#1a1a1a");
         var swagger = new RouterLink("Swagger", SwaggerView.class);
         results.setHighlightCondition(HighlightConditions.sameLocation());
+        swagger.getStyle().set("background-color", "#1a1a1a");
         var about = new RouterLink("About", AboutView.class);
         results.setHighlightCondition(HighlightConditions.sameLocation());
+        about.getStyle().set("background-color", "#1a1a1a");
 
         Tabs tabs = new Tabs(new Tab(reports), new Tab(results), new Tab(swagger), new Tab(about));
         tabs.setOrientation(Tabs.Orientation.VERTICAL);
@@ -59,7 +63,7 @@ public class MainLayout extends AppLayout {
 
         var menu = new VerticalLayout(tabs);
         menu.setHeightFull();
-        menu.getStyle().set("background-color", "lightgray"); // Пример изменения цвета фона меню
+        menu.getStyle().set("background-color", "#1a1a1a");
 
         addToDrawer(menu);
     }
