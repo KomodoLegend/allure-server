@@ -3,6 +3,7 @@ package ru.iopump.qa.allure.gui;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
 import com.vaadin.flow.component.dependency.JsModule;
+import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.html.Anchor;
 import com.vaadin.flow.component.html.H3;
 import com.vaadin.flow.component.icon.IronIcon;
@@ -19,6 +20,8 @@ import ru.iopump.qa.allure.gui.view.ResultsView;
 import ru.iopump.qa.allure.gui.view.SwaggerView;
 
 @JsModule("./brands.js")
+@CssImport(value = "./styles.css", themeFor = "vaadin-app-layout")
+
 public class MainLayout extends AppLayout {
 
     public static final String ALLURE_SERVER = "Allure Server";
@@ -28,19 +31,18 @@ public class MainLayout extends AppLayout {
     public MainLayout() {
         createHeader();
         createDrawer();
-        // Добавление стилей
-        addClassName("main-layout"); // Название класса со стилями
     }
 
     private void createHeader() {
         var logo = new H3(ALLURE_SERVER);
         logo.addClassName("logo");
+        logo.getStyle().set("color", "blue"); // Пример изменения цвета логотипа
 
         var header = new HorizontalLayout(new DrawerToggle(), logo);
         header.setDefaultVerticalComponentAlignment(FlexComponent.Alignment.CENTER);
         header.setWidth("100%");
         header.addClassName("header");
-
+        header.getStyle().set("background-color", "#1a1a1a");
         addToNavbar(header);
     }
 
@@ -60,6 +62,7 @@ public class MainLayout extends AppLayout {
 
         var menu = new VerticalLayout(tabs);
         menu.setHeightFull();
+        menu.getStyle().set("background-color", "#1a1a1a");
 
         addToDrawer(menu);
     }
