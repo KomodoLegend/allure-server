@@ -36,7 +36,7 @@ public class MainLayout extends AppLayout {
     private void createHeader() {
         var logo = new H3(ALLURE_SERVER);
         logo.addClassName("logo");
-        logo.getStyle().set("color", "green"); // Пример изменения цвета логотипа
+        logo.getStyle().set("color", "#1a1a1a"); // Пример изменения цвета логотипа
 
         var header = new HorizontalLayout(new DrawerToggle(), logo);
         header.setDefaultVerticalComponentAlignment(FlexComponent.Alignment.CENTER);
