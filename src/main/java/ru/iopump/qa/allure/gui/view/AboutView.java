@@ -41,6 +41,7 @@ public class AboutView extends VerticalLayout {
                 "Run your tests, make zip archive with the allure results and upload to the Allure Server by API or Web-UI")
         );
 
+        var mainLayout = new VerticalLayout(description);
         mainLayout.getStyle().set(FONT_FAMILY, GERMANIA_ONE);
         add(mainLayout);
     }
