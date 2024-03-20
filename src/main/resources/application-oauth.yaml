@@ -4,15 +4,14 @@ spring:
     oauth2:
       client:
         registration:
-          google:
+          keycloak:
             client-id: ${OAUTH2_GOOGLE_ALLURE_CLIENT_ID}
             client-secret: ${OAUTH2_GOOGLE_ALLURE_CLIENT_SECRET}
             scope: openid, profile, email
-            redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
-            client-name: Google
+            client-name: keycloak
         provider:
-          google:
-            issuer-uri: https://accounts.google.com
+          keycloak:
+            issuer-uri: https://auth.indels.tech/realms/inDels
 
 ### App OAuth2 Security Configuration Toggle
 app:
