@@ -36,13 +36,14 @@ public class MainLayout extends AppLayout {
     private void createHeader() {
         var logo = new H3(ALLURE_SERVER);
         logo.addClassName("logo");
-    //    logo.getStyle().set("color", "#1a1a1a");
+        logo.getStyle().set("background-color", "#ffffff");
+        logo.getStyle().set("color", "#ffffff");
 
         var header = new HorizontalLayout(new DrawerToggle(), logo);
         header.setDefaultVerticalComponentAlignment(FlexComponent.Alignment.CENTER);
         header.setWidth("100%");
         header.addClassName("header");
-        //header.getStyle().set("background-color", "#1a1a1a");
+        header.getStyle().set("background-color", "#1a1a1a");
         addToNavbar(header);
     }
 
@@ -62,7 +63,7 @@ public class MainLayout extends AppLayout {
 
         var menu = new VerticalLayout(tabs);
         menu.setHeightFull();
-        //menu.getStyle().set("background-color", "#1a1a1a");
+        menu.getStyle().set("background-color", "#1a1a1a");
 
         addToDrawer(menu);
     }
