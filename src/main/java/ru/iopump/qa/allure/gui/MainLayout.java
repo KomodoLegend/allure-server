@@ -18,8 +18,9 @@ import ru.iopump.qa.allure.gui.view.ReportsView;
 import ru.iopump.qa.allure.gui.view.ResultsView;
 import ru.iopump.qa.allure.gui.view.SwaggerView;
 
-//@JsModule("./brands.js")
+@JsModule("./brands.js")
 @CssImport("./styles/main-layout-styles.css")
+
 public class MainLayout extends AppLayout {
 
     public static final String ALLURE_SERVER = "Allure Server";
