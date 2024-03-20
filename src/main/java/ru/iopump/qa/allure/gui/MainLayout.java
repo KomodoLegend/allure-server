@@ -42,7 +42,7 @@ public class MainLayout extends AppLayout {
         header.setDefaultVerticalComponentAlignment(FlexComponent.Alignment.CENTER);
         header.setWidth("100%");
         header.addClassName("header");
-        header.getStyle().set("background-color", "#1a1a1a");
+        //header.getStyle().set("background-color", "#1a1a1a");
         addToNavbar(header);
     }
 
@@ -62,7 +62,7 @@ public class MainLayout extends AppLayout {
 
         var menu = new VerticalLayout(tabs);
         menu.setHeightFull();
-        menu.getStyle().set("background-color", "#1a1a1a");
+        //menu.getStyle().set("background-color", "#1a1a1a");
 
         addToDrawer(menu);
     }
