@@ -56,8 +56,7 @@ public class MainLayout extends AppLayout {
         tabs.setOrientation(Tabs.Orientation.VERTICAL);
         tabs.setSizeFull();
 
-        var footer = new HorizontalLayout(github, dockerHub, linkedIn);
-        var menu = new VerticalLayout(tabs, footer);
+        var menu = new VerticalLayout(tabs);
         menu.setHeightFull();
 
         addToDrawer(menu);
