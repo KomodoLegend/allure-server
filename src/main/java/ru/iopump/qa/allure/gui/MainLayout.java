@@ -1,6 +1,7 @@
+package ru.iopump.qa.allure.gui;
+
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
-import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.dependency.JsModule;
 import com.vaadin.flow.component.html.Anchor;
 import com.vaadin.flow.component.html.H3;
@@ -18,7 +19,6 @@ import ru.iopump.qa.allure.gui.view.ResultsView;
 import ru.iopump.qa.allure.gui.view.SwaggerView;
 
 @JsModule("./brands.js")
-@CssImport(value = "./styles/main-layout-styles.css", themeFor = "vaadin-app-layout")
 public class MainLayout extends AppLayout {
 
     public static final String ALLURE_SERVER = "Allure Server";
@@ -33,24 +33,29 @@ public class MainLayout extends AppLayout {
     private void createHeader() {
         var logo = new H3(ALLURE_SERVER);
         logo.addClassName("logo");
+        logo.getStyle().set("color", "blue"); // Пример изменения цвета логотипа
 
         var header = new HorizontalLayout(new DrawerToggle(), logo);
         header.setDefaultVerticalComponentAlignment(FlexComponent.Alignment.CENTER);
         header.setWidth("100%");
         header.addClassName("header");
-
+        header.getStyle().set("background-color", "#1a1a1a");
         addToNavbar(header);
     }
 
     private void createDrawer() {
         var reports = new RouterLink("Reports", ReportsView.class);
         reports.setHighlightCondition(HighlightConditions.sameLocation());
+        reports.getStyle().set("color", "#ffffff");
         var results = new RouterLink("Results", ResultsView.class);
         results.setHighlightCondition(HighlightConditions.sameLocation());
+        results.getStyle().set("color", "#ffffff");
         var swagger = new RouterLink("Swagger", SwaggerView.class);
         results.setHighlightCondition(HighlightConditions.sameLocation());
+        swagger.getStyle().set("color", "#ffffff");
         var about = new RouterLink("About", AboutView.class);
         results.setHighlightCondition(HighlightConditions.sameLocation());
+        about.getStyle().set("color", "#ffffff");
 
         Tabs tabs = new Tabs(new Tab(reports), new Tab(results), new Tab(swagger), new Tab(about));
         tabs.setOrientation(Tabs.Orientation.VERTICAL);
@@ -58,6 +63,7 @@ public class MainLayout extends AppLayout {
 
         var menu = new VerticalLayout(tabs);
         menu.setHeightFull();
+        menu.getStyle().set("background-color", "#1a1a1a");
 
         addToDrawer(menu);
     }
