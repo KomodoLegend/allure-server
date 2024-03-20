@@ -28,13 +28,12 @@ public class MainLayout extends AppLayout {
     public MainLayout() {
         createHeader();
         createDrawer();
-        // Добавление стилей
-        addClassName("main-layout"); // Название класса со стилями
     }
 
     private void createHeader() {
         var logo = new H3(ALLURE_SERVER);
         logo.addClassName("logo");
+        logo.getStyle().set("color", "blue"); // Пример изменения цвета логотипа
 
         var header = new HorizontalLayout(new DrawerToggle(), logo);
         header.setDefaultVerticalComponentAlignment(FlexComponent.Alignment.CENTER);
@@ -60,6 +59,7 @@ public class MainLayout extends AppLayout {
 
         var menu = new VerticalLayout(tabs);
         menu.setHeightFull();
+        menu.getStyle().set("background-color", "lightgray"); // Пример изменения цвета фона меню
 
         addToDrawer(menu);
     }
