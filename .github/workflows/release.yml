@@ -36,20 +36,6 @@ jobs:
           path: build/libs/allure-server-${{ env.RELEASE_VERSION }}.jar
         env:
           ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@latest
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
-        with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ env.RELEASE_VERSION }}
-          body: |
-            Changes in this Release
-            - First Change
-          draft: false
-          prerelease: false
       - name: Upload Release Asset
         id: upload-release-asset
         uses: actions/upload-release-asset@v1
