@@ -2,7 +2,7 @@ package ru.iopump.qa.allure.gui;
 
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
-import com.vaadin.flow.component.dependency.CssImport;
+import com.vaadin.flow.component.dependency.JsModule;
 import com.vaadin.flow.component.html.Anchor;
 import com.vaadin.flow.component.html.H3;
 import com.vaadin.flow.component.icon.IronIcon;
@@ -18,7 +18,7 @@ import ru.iopump.qa.allure.gui.view.ReportsView;
 import ru.iopump.qa.allure.gui.view.ResultsView;
 import ru.iopump.qa.allure.gui.view.SwaggerView;
 
-@CssImport("./styles.css") // Импорт файла стилей
+@JsModule("./brands.js")
 public class MainLayout extends AppLayout {
 
     public static final String ALLURE_SERVER = "Allure Server";
@@ -28,11 +28,13 @@ public class MainLayout extends AppLayout {
     public MainLayout() {
         createHeader();
         createDrawer();
+        // Добавление стилей
+        addClassName("main-layout"); // Название класса со стилями
     }
 
     private void createHeader() {
         var logo = new H3(ALLURE_SERVER);
-        logo.addClassName("logo"); // Применение класса стиля
+        logo.addClassName("logo");
 
         var header = new HorizontalLayout(new DrawerToggle(), logo);
         header.setDefaultVerticalComponentAlignment(FlexComponent.Alignment.CENTER);
@@ -48,9 +50,9 @@ public class MainLayout extends AppLayout {
         var results = new RouterLink("Results", ResultsView.class);
         results.setHighlightCondition(HighlightConditions.sameLocation());
         var swagger = new RouterLink("Swagger", SwaggerView.class);
-        swagger.setHighlightCondition(HighlightConditions.sameLocation());
+        results.setHighlightCondition(HighlightConditions.sameLocation());
         var about = new RouterLink("About", AboutView.class);
-        about.setHighlightCondition(HighlightConditions.sameLocation());
+        results.setHighlightCondition(HighlightConditions.sameLocation());
 
         Tabs tabs = new Tabs(new Tab(reports), new Tab(results), new Tab(swagger), new Tab(about));
         tabs.setOrientation(Tabs.Orientation.VERTICAL);

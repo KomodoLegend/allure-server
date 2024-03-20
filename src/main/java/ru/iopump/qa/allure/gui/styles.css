@@ -1,11 +1,25 @@
-/* styles.css или styles.scss */
+/* styles.css */
 
-/* Цвет для заголовка с классом "logo" */
+.main-layout {
+    background-color: #f0f0f0; /* Цвет фона */
+    color: #333; /* Цвет текста */
+}
+
 .logo {
-    color: #ff0000; /* Красный цвет текста */
+    color: #007bff; /* Цвет логотипа */
 }
 
-/* Цвет для фона элемента с классом "header" */
 .header {
-    background-color: #0000ff; /* Синий цвет фона */
+    background-color: #007bff; /* Цвет шапки */
+    color: #fff; /* Цвет текста в шапке */
 }
+
+/* Дополнительные стили для меню и вкладок */
+.menu-item {
+    color: #333; /* Цвет текста пунктов меню */
+}
+
+.menu-item:hover {
+    color: #007bff; /* Цвет текста при наведении */
+}
+
