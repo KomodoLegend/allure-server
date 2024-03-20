@@ -10,6 +10,8 @@ import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
+import com.vaadin.flow.component.page.BodySize;
+import com.vaadin.flow.component.dependency.CssImport;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import lombok.NonNull;
@@ -23,6 +25,8 @@ import ru.iopump.qa.util.ResourceUtil;
 @PageTitle("About | " + ALLURE_SERVER)
 @Route(value = "about", layout = MainLayout.class)
 @Slf4j
+@CssImport(value = "./custom-styles.css", themeFor = "vaadin-paragraph")
+@BodySize(width = "100%", height = "100%")
 public class AboutView extends VerticalLayout {
     public static final String FONT_FAMILY = "font-family";
     public static final String GERMANIA_ONE = "Cambria";
