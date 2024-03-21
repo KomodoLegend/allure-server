@@ -24,7 +24,7 @@ server.port: ${PORT:8080}
 basic.auth:
   username: admin
   password: admin
-  enable: false
+  enable: true
 
 ### App Configuration
 springdoc.swagger-ui.path: /swagger-ui.html
